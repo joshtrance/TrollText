@@ -19,7 +19,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 
-public class Texting extends Activity implements OnItemClickListener {
+public class Texting extends Activity {
 
     private static Texting inst;
     ArrayList<String> smsMessagesList = new ArrayList<String>();
@@ -40,7 +40,8 @@ public class Texting extends Activity implements OnItemClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_texting);
 
-        smsListView.setOnItemClickListener(this);
+
+
 
 
         refreshSmsInbox();
@@ -52,22 +53,7 @@ public class Texting extends Activity implements OnItemClickListener {
 
 
 
-    public void onItemClick(AdapterView<?> parent, View view, int pos, long id) {
-        try {
-            String[] smsMessages = smsMessagesList.get(pos).split("\n");
-            String address = smsMessages[0];
-            String smsMessage = "";
-            for (int i = 1; i < smsMessages.length; ++i) {
-                smsMessage += smsMessages[i];
-            }
 
-            String smsMessageStr = address + "\n";
-            smsMessageStr += smsMessage;
-            Toast.makeText(this, smsMessageStr, Toast.LENGTH_SHORT).show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
     public void Button1(View view){
         sendSMSMessage("Yes");
 
