@@ -69,8 +69,8 @@ public class dial extends Activity {
         try {
 
             Intent intentBundle = new Intent(dial.this, Texting.class);
-            intentBundle.putExtra("message", currentNumber);
-
+            intentBundle.putExtra("trollNumber", currentNumber);
+            intentBundle.putExtra("trollName", "Enemy");
             startActivity(intentBundle);
 
         } catch (ActivityNotFoundException activityException) {

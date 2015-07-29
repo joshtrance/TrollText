@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -20,7 +21,8 @@ import java.util.ArrayList;
 
 
 public class Texting extends Activity {
-
+    private TextView enemyName;
+    private TextView enemyNumber;
     private static Texting inst;
     ArrayList<String> smsMessagesList = new ArrayList<String>();
     ListView smsListView;
@@ -39,12 +41,14 @@ public class Texting extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_texting);
+        Intent intent = getIntent();
+
+        enemyName = (TextView) findViewById(R.id.enemyName);
+        enemyNumber = (TextView) findViewById(R.id.enemyNumber);
+        enemyNumber.setText(intent.getStringExtra("trollNumber"));
+        enemyName.setText(intent.getStringExtra("trollName"));
 
 
-
-
-
-        refreshSmsInbox();
     }
 
     public void refreshSmsInbox() {
@@ -92,7 +96,7 @@ public class Texting extends Activity {
 
         try {
             SmsManager smsManager = SmsManager.getDefault();
-            smsManager.sendTextMessage((intent.getStringExtra("message")), null, message, null, null);
+            smsManager.sendTextMessage((intent.getStringExtra("trollnumber")), null, message, null, null);
             Toast.makeText(getApplicationContext(), "SMS sent.", Toast.LENGTH_LONG).show();
         }
 
