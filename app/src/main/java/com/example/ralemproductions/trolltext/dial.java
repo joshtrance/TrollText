@@ -12,13 +12,14 @@ import android.widget.TextView;
 
 
 public class dial extends Activity {
+
     private String currentNumber = "";
     private TextView callText;
 
     @Override
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_dial);
         callText = (TextView) findViewById(R.id.call);
         UpdateCallText();
@@ -146,9 +147,6 @@ public class dial extends Activity {
         MediaPlayer player = MediaPlayer.create(this, R.raw.zero);
         player.start();
     }
-
-
-
 
     public void ButtonDelete(View view) {
         BackSpace();

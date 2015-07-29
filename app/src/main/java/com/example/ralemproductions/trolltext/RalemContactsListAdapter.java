@@ -67,7 +67,7 @@ public class RalemContactsListAdapter extends BaseAdapter {
         LayoutInflater inflater = context.getLayoutInflater();
 
         if (convertView == null) {
-            convertView = inflater.inflate(R.layout.ralem_contacts_list_view, null);
+            convertView = inflater.inflate(R.layout.ralem_contact_listview, null);
             holder = new ViewHolder();
             holder.txtViewTitle = (TextView) convertView.findViewById(R.id.textView1);
             holder.txtViewDescription = (TextView) convertView.findViewById(R.id.textView2);

@@ -13,6 +13,7 @@ import android.widget.Button;
 public class MainActivity extends Activity {
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,14 +45,14 @@ public class MainActivity extends Activity {
 
     public void buttonDialOnClick(View v){
 
-        Button button =(Button) v;
-        startActivity(new Intent(getApplicationContext(), dial.class));
+        startActivity(new Intent(MainActivity.this, dial.class));
+
     }
 
 
     public void buttonContactOnClick(View v){
 
-        Button button =(Button) v;
-        startActivity(new Intent(getApplicationContext(), chooseContact.class));
+        startActivity(new Intent(MainActivity.this, chooseContact.class));
+
     }
 }
