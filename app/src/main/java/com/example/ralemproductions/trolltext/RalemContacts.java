@@ -59,10 +59,12 @@ public class RalemContacts {
     }
 
 }
+
 class RalemContactData{
     String name;
     String number;
 }
+
 class RalemContactsComparator implements Comparator<RalemContactData> {
 
     @Override
