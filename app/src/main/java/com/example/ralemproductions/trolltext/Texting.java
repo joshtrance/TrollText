@@ -39,9 +39,7 @@ public class Texting extends Activity implements OnItemClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_texting);
-        smsListView = (ListView) findViewById(R.id.SMSList);
-        arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, smsMessagesList);
-        smsListView.setAdapter(arrayAdapter);
+
         smsListView.setOnItemClickListener(this);
 
 
@@ -49,25 +47,10 @@ public class Texting extends Activity implements OnItemClickListener {
     }
 
     public void refreshSmsInbox() {
-        Uri inboxURI = Uri.parse("content://sms/inbox");
-        ContentResolver contentResolver = getContentResolver();
 
-        Cursor smsInboxCursor = contentResolver.query(inboxURI, null, null, null, null);
-        int indexBody = smsInboxCursor.getColumnIndex("body");
-        int indexAddress = smsInboxCursor.getColumnIndex("address");
-        if (indexBody < 0 || !smsInboxCursor.moveToFirst()) return;
-        arrayAdapter.clear();
-        do {
-            String str = "SMS From: " + smsInboxCursor.getString(indexAddress) +
-                    "\n" + smsInboxCursor.getString(indexBody) + "\n";
-            arrayAdapter.add(str);
-        } while (smsInboxCursor.moveToNext());
     }
 
-    public void updateList(final String smsMessage) {
-        arrayAdapter.insert(smsMessage, 0);
-        arrayAdapter.notifyDataSetChanged();
-    }
+
 
     public void onItemClick(AdapterView<?> parent, View view, int pos, long id) {
         try {
@@ -120,6 +103,7 @@ public class Texting extends Activity implements OnItemClickListener {
 
         String message = newMessage;
         Intent intent = getIntent();
+
         try {
             SmsManager smsManager = SmsManager.getDefault();
             smsManager.sendTextMessage((intent.getStringExtra("message")), null, message, null, null);

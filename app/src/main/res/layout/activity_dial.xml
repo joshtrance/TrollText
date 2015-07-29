@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="5" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.1"
+        android:orientation="horizontal"
+
+        android:weightSum="3" >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="1"
+            android:onClick="Button1"
+
+            android:textColor="#ffff00"
+            android:textSize="100sp"
+
+            android:background="@drawable/b1"
+            android:id="@+id/b1"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:textColor="#ffff00"
+            android:textSize="100sp"
+            android:text="2"
+            android:onClick="Button2"
+            android:background="@drawable/b1"
+            android:id="@+id/b2" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:id="@+id/b3"
+            android:background="@drawable/b1"
+            android:textColor="#ffff00"
+            android:textSize="100sp"
+            android:onClick="Button3"
+            android:text="3"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.1"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:id="@+id/b4"
+            android:background="@drawable/b1"
+            android:textColor="#ffff00"
+            android:textSize="100sp"
+            android:onClick="Button4"
+            android:text="4"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:id="@+id/b5"
+            android:background="@drawable/b1"
+            android:textColor="#ffff00"
+            android:textSize="100sp"
+            android:onClick="Button5"
+            android:text="5"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:id="@+id/b6"
+            android:background="@drawable/b1"
+            android:textColor="#ffff00"
+            android:textSize="100sp"
+            android:onClick="Button6"
+            android:text="6"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.1"
+        android:orientation="horizontal"
+
+        android:weightSum="3" >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:id="@+id/b7"
+            android:background="@drawable/b1"
+            android:textColor="#ffff00"
+            android:textSize="100sp"
+            android:onClick="Button7"
+            android:text="7"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:id="@+id/b8"
+            android:background="@drawable/b1"
+            android:textColor="#ffff00"
+            android:textSize="100sp"
+            android:onClick="Button8"
+            android:text="8"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:id="@+id/b9"
+            android:background="@drawable/b1"
+            android:text="9"
+            android:onClick="Button9"
+            android:textColor="#ffff00"
+            android:textSize="100sp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.1"
+        android:orientation="horizontal"
+
+        android:weightSum="3" >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/b1"
+            android:id="@+id/b0"
+            android:onClick="Button0"
+            android:textColor="#ffff00"
+            android:textSize="100sp"
+            android:text="0" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="2"
+            android:background="@drawable/b1"
+            android:id="@+id/useless"
+            android:onClick="ButtonDelete"
+            android:textColor="#ff0000"
+            android:textSize="40sp"
+            android:text="Enter # to text"  />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".6"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+        <Button
+            android:layout_width="0dp"
+            android:background="@drawable/b1"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.5"
+            android:onClick="ButtonCall"
+            android:textSize="40sp"
+            android:text="8009999999"
+            android:id="@+id/call"
+
+            />
+        <Button android:layout_width="0dp"
+
+            android:layout_height="fill_parent"
+            android:layout_weight=".5"
+            android:id="@+id/bDelete"
+            android:onClick="ButtonDelete"
+            android:background="@drawable/b1"
+            />
+    </LinearLayout>
+</LinearLayout>
