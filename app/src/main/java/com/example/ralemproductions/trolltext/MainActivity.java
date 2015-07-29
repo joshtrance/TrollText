@@ -8,6 +8,7 @@ import android.view.MenuItem;
 
 public class MainActivity extends ActionBarActivity {
 
+    //FUCK YOU
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
