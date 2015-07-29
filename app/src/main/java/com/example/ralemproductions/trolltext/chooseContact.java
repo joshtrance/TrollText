@@ -13,6 +13,8 @@ import android.widget.Toast;
 
 public class chooseContact extends Activity {
 
+    //test
+
     private static final String TAG = "myLog";
     RalemContacts rContacts;
 
