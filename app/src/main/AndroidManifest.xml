@@ -24,6 +24,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.ralemproductions.trolltext.MainActivity" />
         </activity>
+        <activity
+            android:name=".chooseContact"
+            android:label="@string/title_activity_choose_contact" >
+        </activity>
     </application>
 
 </manifest>

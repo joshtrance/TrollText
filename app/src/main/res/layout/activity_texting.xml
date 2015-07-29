@@ -102,11 +102,14 @@
         android:orientation="horizontal"
         android:weightSum="3" >
 
-        <ListView android:id="@+id/SMSList"
-            android:layout_height="227dp"
-            android:textSize="75sp"
-            android:layout_width="match_parent"
-            />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10"
+            android:id="@+id/editText"
+            android:layout_weight="1" />
+
     </LinearLayout>
 
 
