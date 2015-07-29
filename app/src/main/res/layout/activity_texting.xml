@@ -9,6 +9,32 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1.1"
+        android:orientation="vertical"
+        android:background="@drawable/b1"
+        android:weightSum="4" >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Large Text"
+            android:id="@+id/enemyName"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Large Text"
+            android:id="@+id/enemyNumber"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.1"
         android:orientation="horizontal"
 
         android:weightSum="3" >
@@ -21,9 +47,8 @@
             android:onClick="Button1"
 
             android:textColor="#ffff00"
-            android:textSize="60sp"
+            android:textSize="50sp"
 
-            android:background="@drawable/b1"
             android:id="@+id/b1"
             />
 
@@ -35,7 +60,6 @@
             android:textSize="60sp"
             android:text="No"
             android:onClick="Button2"
-            android:background="@drawable/b1"
             android:id="@+id/b2" />
 
         <Button
@@ -43,7 +67,6 @@
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:id="@+id/b3"
-            android:background="@drawable/b1"
             android:textColor="#ffff00"
             android:textSize="30sp"
             android:onClick="Button3"
@@ -63,7 +86,6 @@
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:id="@+id/b4"
-            android:background="@drawable/b1"
             android:textColor="#ffff00"
             android:textSize="40sp"
             android:onClick="Button4"
@@ -75,7 +97,6 @@
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:id="@+id/b5"
-            android:background="@drawable/b1"
             android:textColor="#ffff00"
             android:textSize="35sp"
             android:onClick="Button5"
@@ -87,28 +108,11 @@
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:id="@+id/b6"
-            android:background="@drawable/b1"
             android:textColor="#ffff00"
             android:textSize="35sp"
             android:onClick="Button6"
             android:text="Help"
             />
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1.1"
-        android:orientation="horizontal"
-        android:weightSum="3" >
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="phone"
-            android:ems="10"
-            android:id="@+id/editText"
-            android:layout_weight="1" />
 
     </LinearLayout>
 

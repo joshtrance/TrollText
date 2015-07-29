@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -19,8 +20,9 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 
-public class Texting extends Activity implements OnItemClickListener {
-
+public class Texting extends Activity {
+    private TextView enemyName;
+    private TextView enemyNumber;
     private static Texting inst;
     ArrayList<String> smsMessagesList = new ArrayList<String>();
     ListView smsListView;
@@ -39,11 +41,14 @@ public class Texting extends Activity implements OnItemClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_texting);
+        Intent intent = getIntent();
 
-        smsListView.setOnItemClickListener(this);
+        enemyName = (TextView) findViewById(R.id.enemyName);
+        enemyNumber = (TextView) findViewById(R.id.enemyNumber);
+        enemyNumber.setText(intent.getStringExtra("trollNumber"));
+        enemyName.setText(intent.getStringExtra("trollName"));
 
 
-        refreshSmsInbox();
     }
 
     public void refreshSmsInbox() {
@@ -52,22 +57,7 @@ public class Texting extends Activity implements OnItemClickListener {
 
 
 
-    public void onItemClick(AdapterView<?> parent, View view, int pos, long id) {
-        try {
-            String[] smsMessages = smsMessagesList.get(pos).split("\n");
-            String address = smsMessages[0];
-            String smsMessage = "";
-            for (int i = 1; i < smsMessages.length; ++i) {
-                smsMessage += smsMessages[i];
-            }
 
-            String smsMessageStr = address + "\n";
-            smsMessageStr += smsMessage;
-            Toast.makeText(this, smsMessageStr, Toast.LENGTH_SHORT).show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
     public void Button1(View view){
         sendSMSMessage("Yes");
 
@@ -106,7 +96,7 @@ public class Texting extends Activity implements OnItemClickListener {
 
         try {
             SmsManager smsManager = SmsManager.getDefault();
-            smsManager.sendTextMessage((intent.getStringExtra("message")), null, message, null, null);
+            smsManager.sendTextMessage((intent.getStringExtra("trollnumber")), null, message, null, null);
             Toast.makeText(getApplicationContext(), "SMS sent.", Toast.LENGTH_LONG).show();
         }
 

@@ -30,6 +30,10 @@
             android:name=".chooseContact"
             android:label="@string/title_activity_choose_contact" >
         </activity>
+        <activity
+            android:name=".dial"
+            android:label="@string/title_activity_choose_contact" >
+        </activity>
     </application>
 
 </manifest>
