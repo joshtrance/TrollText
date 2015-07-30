@@ -30,10 +30,11 @@ public class chooseContact extends Activity {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
 
-                Intent intent=new Intent(chooseContact.this,Texting.class);
-                intent.putExtra("number", rContacts.getNumber(position));
+                Intent i=new Intent(chooseContact.this,Texting.class);
+                i.putExtra("number", rContacts.getNumber(position));
+                i.putExtra("name", rContacts.getName(position));
 
-                startActivity(intent);
+                startActivity(i);
             }
     });
     }
