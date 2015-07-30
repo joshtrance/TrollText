@@ -32,7 +32,7 @@ public class chooseContact extends Activity {
 
                 Intent i=new Intent(chooseContact.this,Texting.class);
                 i.putExtra("number", rContacts.getNumber(position));
-
+                i.putExtra("name", rContacts.getName(position));
 
                 startActivity(i);
             }

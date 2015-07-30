@@ -46,7 +46,7 @@ public class Texting extends Activity {
         enemyName = (TextView) findViewById(R.id.enemyName);
         enemyNumber = (TextView) findViewById(R.id.enemyNumber);
         enemyNumber.setText(intent.getStringExtra("number"));
-        enemyName.setText(intent.getStringExtra("trollName"));
+        enemyName.setText(intent.getStringExtra("name"));
 
 
     }
