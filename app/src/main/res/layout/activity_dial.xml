@@ -13,7 +13,7 @@
 
         android:weightSum="3" >
 
-        <Button
+        <ImageButton
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
@@ -22,6 +22,7 @@
             android:textColor="#ffff00"
             android:textSize="100sp"
             android:id="@+id/b1"
+            android:src="@drawable/one"
             />
 
         <Button
