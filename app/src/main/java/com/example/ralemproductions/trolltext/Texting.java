@@ -45,7 +45,7 @@ public class Texting extends Activity {
 
         enemyName = (TextView) findViewById(R.id.enemyName);
         enemyNumber = (TextView) findViewById(R.id.enemyNumber);
-        enemyNumber.setText(intent.getStringExtra("trollNumber"));
+        enemyNumber.setText(intent.getStringExtra("number"));
         enemyName.setText(intent.getStringExtra("trollName"));
 
 
@@ -96,7 +96,7 @@ public class Texting extends Activity {
 
         try {
             SmsManager smsManager = SmsManager.getDefault();
-            smsManager.sendTextMessage((intent.getStringExtra("trollnumber")), null, message, null, null);
+            smsManager.sendTextMessage((intent.getStringExtra("number")), null, message, null, null);
             Toast.makeText(getApplicationContext(), "SMS sent.", Toast.LENGTH_LONG).show();
         }
 

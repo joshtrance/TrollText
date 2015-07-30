@@ -1,7 +1,10 @@
 package com.example.ralemproductions.trolltext;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 
@@ -23,12 +26,23 @@ public class chooseContact extends Activity {
         RalemContactsListAdapter contactAdapter = new RalemContactsListAdapter(this, rContacts);
 
         contactListView.setAdapter(contactAdapter);
-        //contactListView.setOnItemClickListener(this);
+        contactListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View view,
+                                    int position, long id) {
+
+                Intent i=new Intent(chooseContact.this,Texting.class);
+                i.putExtra("number", rContacts.getNumber(position));
+
+
+                startActivity(i);
+            }
+    });
     }
     //public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
     // TODO Auto-generated method stub
     //Toast.makeText(this, "NAME: " + rContacts.getName(position).toString() + "  NUMBER: " + rContacts.getNumber(position).toString(), Toast.LENGTH_SHORT).show();
     //}
-}
 
+
+}
