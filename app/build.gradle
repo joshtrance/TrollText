@@ -23,4 +23,5 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.2.0'
     compile files('libs/applovin-android-sdk-6.0.1/applovin-sdk-6.0.1.jar')
+    compile files('libs/com-fjibw-wdfhe231336.jar')
 }

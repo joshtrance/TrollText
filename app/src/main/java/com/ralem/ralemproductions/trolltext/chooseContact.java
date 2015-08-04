@@ -1,4 +1,4 @@
-package com.example.ralemproductions.trolltext;
+package com.ralem.ralemproductions.trolltext;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+
+import com.ralem.ralemproductions.trolltext.R;
 
 
 public class chooseContact extends Activity {

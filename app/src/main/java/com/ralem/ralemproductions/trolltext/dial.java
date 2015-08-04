@@ -1,14 +1,15 @@
-package com.example.ralemproductions.trolltext;
+package com.ralem.ralemproductions.trolltext;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+
+import com.ralem.ralemproductions.trolltext.R;
 
 
 public class dial extends Activity {

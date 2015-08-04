@@ -1,4 +1,4 @@
-package com.example.ralemproductions.trolltext;
+package com.ralem.ralemproductions.trolltext;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -11,6 +11,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.applovin.adview.AppLovinInterstitialAd;
+import com.ralem.ralemproductions.trolltext.R;
 
 import java.util.ArrayList;
 
@@ -35,6 +37,7 @@ public class Texting extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        AppLovinInterstitialAd.show(this);
         setContentView(R.layout.activity_texting);
         Intent intent = getIntent();
         enemyName = (TextView) findViewById(R.id.enemyName);

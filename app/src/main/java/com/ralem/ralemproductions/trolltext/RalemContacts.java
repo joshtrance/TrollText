@@ -1,4 +1,4 @@
-package com.example.ralemproductions.trolltext;
+package com.ralem.ralemproductions.trolltext;
 
 import android.app.Activity;
 import android.database.Cursor;

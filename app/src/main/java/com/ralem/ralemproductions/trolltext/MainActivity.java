@@ -1,24 +1,14 @@
-package com.example.ralemproductions.trolltext;
+package com.ralem.ralemproductions.trolltext;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 
-import com.applovin.adview.AppLovinAdView;
-import com.applovin.adview.AppLovinInterstitialAd;
-import com.applovin.nativeAds.AppLovinNativeAd;
-import com.applovin.nativeAds.AppLovinNativeAdLoadListener;
-import com.applovin.sdk.AppLovinAd;
-import com.applovin.sdk.AppLovinAdSize;
-import com.applovin.sdk.AppLovinErrorCodes;
 import com.applovin.sdk.AppLovinSdk;
-
-import java.util.List;
+import com.ralem.ralemproductions.trolltext.R;
 
 
 public class MainActivity extends Activity {
@@ -32,7 +22,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        AppLovinInterstitialAd.show(this);
+
     }
 
     @Override
