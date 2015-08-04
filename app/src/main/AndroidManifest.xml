@@ -18,6 +18,10 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        <meta-data android:name="applovin.sdk.key" android:value="1FyRzA4OzmrHFbhG_0yTNinC1K55wwOx9KM6VRVTCKlRwQivRfNqM90NU5TO_sJ9BgGg6m8J5um0JSwl6HTSRT"  />
+
+        <activity android:name="com.applovin.adview.AppLovinInterstitialActivity" />
+        <activity android:name="com.applovin.adview.AppLovinConfirmationActivity" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >

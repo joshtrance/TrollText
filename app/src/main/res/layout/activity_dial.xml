@@ -44,10 +44,9 @@
             android:id="@+id/b3"
             android:src="@drawable/three"
             android:padding="0dp"
+            android:layout_alignTop="@+id/b2"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="30dp"
-            />
+            android:layout_alignParentEnd="true" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -163,7 +162,7 @@
             android:layout_height="wrap_content"
             android:onClick="Proceed"
             android:id="@+id/proceed"
-            android:src="@drawable/proceed"
+
             android:padding="0dp"
             android:layout_alignParentRight="true"
             android:layout_marginTop="10dp"

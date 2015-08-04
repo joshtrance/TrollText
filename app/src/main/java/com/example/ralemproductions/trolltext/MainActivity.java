@@ -9,6 +9,17 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.applovin.adview.AppLovinAdView;
+import com.applovin.adview.AppLovinInterstitialAd;
+import com.applovin.nativeAds.AppLovinNativeAd;
+import com.applovin.nativeAds.AppLovinNativeAdLoadListener;
+import com.applovin.sdk.AppLovinAd;
+import com.applovin.sdk.AppLovinAdSize;
+import com.applovin.sdk.AppLovinErrorCodes;
+import com.applovin.sdk.AppLovinSdk;
+
+import java.util.List;
+
 
 public class MainActivity extends Activity {
 
@@ -16,8 +27,12 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        AppLovinSdk.initializeSdk(this);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        AppLovinInterstitialAd.show(this);
     }
 
     @Override
@@ -55,4 +70,6 @@ public class MainActivity extends Activity {
         startActivity(new Intent(MainActivity.this, chooseContact.class));
 
     }
+
+
 }
