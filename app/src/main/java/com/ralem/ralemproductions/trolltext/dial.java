@@ -22,7 +22,7 @@ public class dial extends Activity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_dial);
-        callText = (TextView) findViewById(R.id.call);
+        callText = (TextView)findViewById(R.id.numberText);
         UpdateCallText();
 
 
