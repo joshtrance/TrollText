@@ -169,18 +169,6 @@
             android:layout_marginRight="30dp"
         />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="sned"
-            android:id="@+id/call"
-            android:layout_alignTop="@+id/b0"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_toRightOf="@+id/b0"
-            android:layout_toEndOf="@+id/b0"
-            android:layout_alignBottom="@+id/b0" />
-
     </RelativeLayout>
 
 </LinearLayout>

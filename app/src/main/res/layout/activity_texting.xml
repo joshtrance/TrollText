@@ -11,26 +11,31 @@
         android:layout_weight="1.1"
         android:orientation="vertical"
         android:background="@drawable/b1"
-        android:weightSum="4" >
+        android:weightSum="4"
+        android:id="@+id/">
 
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="135dp"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Large Text"
             android:id="@+id/enemyName"
             android:layout_gravity="center_horizontal"
-            android:background="@android:color/darker_gray"/>
+            android:background="@android:color/holo_blue_dark"
+            android:layout_weight="1.77"
+            android:textColor="#ff0000" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="138dp"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Large Text"
             android:id="@+id/enemyNumber"
             android:layout_gravity="center_horizontal"
-            android:background="@android:color/darker_gray"/>
+            android:background="@android:color/background_dark"
+            android:layout_weight="1.65"
+            android:textColor="#f31111" />
     </LinearLayout>
 
     <LinearLayout
@@ -117,14 +122,56 @@
             />
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.1"
+        android:orientation="horizontal"
+        android:weightSum="3" >
 
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:id="@+id/b7"
+            android:textColor="#ffff00"
+            android:textSize="40sp"
+            android:onClick="Button4"
+            android:text="Thank you"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:id="@+id/b8"
+            android:textColor="#ffff00"
+            android:textSize="35sp"
+            android:onClick="Button5"
+            android:text="Give me 15"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:id="@+id/b9"
+            android:textColor="#ffff00"
+            android:textSize="35sp"
+            android:onClick="Button6"
+            android:text="Help"
+            />
+
+    </LinearLayout>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="38dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="How Annoying?"
         android:id="@+id/textView"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/b2"
+        android:layout_weight="0.35" />
 
     <SeekBar
         android:layout_width="match_parent"
@@ -132,6 +179,5 @@
         android:id="@+id/seekBar"
         android:max="20"
         android:indeterminate="false" />
-
 
 </LinearLayout>
